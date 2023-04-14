@@ -1,5 +1,6 @@
 import blank_profile from "../assets/blank_profile.png";
 import IWilder from "../interfaces/IWilder";
+import DeleteWilderButton from "./DeleteWilderButton";
 import Skill from "./Skill";
 import "./WilderCard.css";
 
@@ -8,7 +9,7 @@ export type WilderCardProps = {
 };
 
 export default function WilderCard({
-  wilder: { name, city, skills },
+  wilder: { id, name, city, skills },
 }: WilderCardProps) {
   return (
     <article className="card">
@@ -21,7 +22,10 @@ export default function WilderCard({
           <Skill key={skill.id} name={skill.name} />
         ))}
       </ul>
-      {/* <button onClick={handleDeleteClick}>Supprimer</button> */}
+      <DeleteWilderButton
+        id={id}
+        onSuccess={() => console.log("Delete wilder")}
+      />
     </article>
   );
 }

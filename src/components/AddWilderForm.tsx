@@ -1,4 +1,3 @@
-import axios from "axios";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useWilders } from "../contexts/WildersContext";
 import { gql, useMutation } from "@apollo/client";

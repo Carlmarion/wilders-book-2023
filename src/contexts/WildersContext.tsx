@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import axios from "axios";
 import IWilder from "../interfaces/IWilder";
 import { gql, useQuery } from "@apollo/client";
 
